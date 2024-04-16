@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <style>
+        .table tr td:first-child { height:40px;}
+        .table tr td:first-child { width:100px; }
+        #indianred td:first-child{ background-color: indianred;}
+        #darksalmon td:first-child {background-color:hsl(15, 72%, 70%); }
+        #lightcoral td:first-child {background-color:hsl(0, 79%, 72%); }
+        #salmon td:first-child {background-color:hsl(6, 93%, 71%); }
+        #orangered td:first-child {background-color:hsl(16, 100%, 50%); }
+        #red td:first-child {background-color:hsl(0, 100%, 50%); }
+        #crimson td:first-child {background-color:hsl(348, 83%, 47%); }
+        #firebrick td:first-child {background-color:hsl(0, 68%, 41%); }
+        #darkred td:first-child {background-color:hsl(0, 100%, 27%); }
+        #mediumvioletred td:first-child {background-color:hsl(322, 80%, 60%); }
+        #pink td:first-child {background-color:hsl(350, 100%, 88%); }
+        #lightpink td:first-child {background-color:hsl(350, 100%, 86%); }
+        #hotpink td:first-child {background-color:hsl(330, 100%, 71%); }
+        #deeppink td:first-child {background-color:hsl(328, 100%, 54%); }
+        #palevioletred td:first-child {background-color:hsl(340, 60%, 65%); }
+        #darkkhaki td:first-child {background-color:hsl(56, 38%, 58%); }
+        #khaki td:first-child {background-color:hsl(54, 77%, 75%); }
+        #palegoldenrod td:first-child {background-color:hsl(55, 66%, 80%); }
+        #lightgoldenrodyellow td:first-child {background-color:hsl(60, 80%, 90%); }
+        #lemonchiffon td:first-child {background-color:hsl(60, 100%, 90%); }
+        #lightyellow td:first-child {background-color:hsl(60, 100%, 94%); }
+        #yellow td:first-child {background-color:hsl(60, 100%, 50%); }
+        #gold td:first-child {background-color:hsl(51, 100%, 50%); }
+        #papayawhip td:first-child {background-color:hsl(37, 100%, 92%); }
+        #moccasin td:first-child {background-color:hsl(38, 100%, 85%); }
+        #peachpuff td:first-child {background-color:hsl(28, 100%, 86%); }
+        #cyan td:first-child {background-color:hsl(180, 100%, 50%); }
+        #aqua td:first-child {background-color:hsl(180, 100%, 50%); }
+        #aquamarine td:first-child {background-color:hsl(160, 100%, 75%); }
+        #turquoise td:first-child {background-color:hsl(174, 72%, 56%); }
+        #mediumturquoise td:first-child {background-color:hsl(176, 59%, 55%); }
+        #darkturquoise td:first-child {background-color:hsl(180, 100%, 41%); }
+        #cadetblue td:first-child {background-color:hsl(182, 25%, 50%); }
+        #slategray td:first-child {background-color:hsl(210, 13%, 50%); }
+        #lightcyan td:first-child {background-color:hsl(180, 100%, 94%); }
+        #paleturquoise td:first-child {background-color:hsl(175, 65%, 81%); }
+        #powderblue td:first-child {background-color:hsl(187, 52%, 80%); }
+        #lightsteelblue td:first-child {background-color:hsl(214, 41%, 78%); }
+        #steelblue td:first-child {background-color:hsl(207, 44%, 49%); }
+        #lightblue td:first-child {background-color:hsl(195, 53%, 79%); }
+        #skyblue td:first-child {background-color:hsl(197, 71%, 73%); }
+        #lightskyblue td:first-child {background-color:hsl(203, 92%, 75%); }
+        #deepskyblue td:first-child {background-color:hsl(195, 100%, 56%); }
+        #cornflowerblue td:first-child {background-color:hsl(219, 79%, 66%); }
+        #royalblue td:first-child {background-color:hsl(225, 72%, 57%); }
+        #mediumslateblue td:first-child {background-color:hsl(249, 83%, 67%); }
+        #dodgerblue td:first-child {background-color:hsl(210, 100%, 56%); }
+        #blue td:first-child {background-color:hsl(240, 100%, 50%); }
+        #mediumblue td:first-child {background-color:hsl(240, 100%, 40%); }
+        #darkblue td:first-child {background-color:hsl(240, 100%, 27%); }
+        #navy td:first-child {background-color:hsl(240, 100%, 25%); }
+        #midnightblue td:first-child {background-color:hsl(240, 64%, 26%); }
+        #lightsalmon td:first-child {background-color:hsl(15, 100%, 74%); }
+        #orange td:first-child {background-color:hsl(39, 100%, 50%); }
+        #darkorange td:first-child {background-color:hsl(33, 100%, 50%); }
+        #coral td:first-child {background-color:hsl(16, 100%, 66%); }
+        #tomato td:first-child {background-color:hsl(9, 100%, 64%); }
+        #aquamarine td:first-child {background-color:hsl(160, 100%, 75%); }
+        #mediumspringgreen td:first-child {background-color:hsl(157, 100%, 60%); }
+        #springgreen td:first-child {background-color:hsl(150, 100%, 50%); }
+        #palegreen td:first-child {background-color:hsl(120, 92%, 79%); }
+        #greenyellow td:first-child {background-color:hsl(84, 100%, 59%); }
+        #chartreuse td:first-child {background-color:hsl(90, 100%, 50%); }
+        #lawngreen td:first-child {background-color:hsl(90, 100%, 50%); }
+        #lime td:first-child {background-color:hsl(120, 100%, 50%); }
+        #lightgreen td:first-child {background-color:hsl(120, 73%, 75%); }
+        #yellowgreen td:first-child {background-color:hsl(80, 61%, 50%); }
+        #limegreen td:first-child {background-color:hsl(120, 61%, 50%); }
+        #mediumseagreen td:first-child {background-color:hsl(157, 50%, 47%); }
+        #darkseagreen td:first-child {background-color:hsl(120, 25%, 56%); }
+        #forestgreen td:first-child {background-color:hsl(120, 61%, 34%); }
+        #seagreen td:first-child {background-color:hsl(146, 50%, 36%); }
+        #green td:first-child {background-color:hsl(120, 100%, 25%); }
+        #olivedrab td:first-child {background-color:hsl(80, 39%, 35%); }
+        #olive td:first-child {background-color:hsl(60, 100%, 25%); }
+        #darkolivegreen td:first-child {background-color:hsl(82, 39%, 30%); }
+        #darkgreen td:first-child {background-color:hsl(120, 100%, 20%); }
+        #mediumaquamarine td:first-child {background-color:hsl(160, 51%, 60%); }
+        #turquoise td:first-child {background-color:hsl(174, 72%, 56%); }
+        #lightseagreen td:first-child {background-color:hsl(177, 70%, 41%); }
+        #darkcyan td:first-child {background-color:hsl(180, 100%, 27%); }
+        #teal td:first-child {background-color:hsl(180, 100%, 25%); }
+        #lavender td:first-child {background-color:hsl(240, 67%, 94%); }
+        #thistle td:first-child {background-color:hsl(300, 24%, 80%); }
+        #plum td:first-child {background-color:hsl(300, 47%, 75%); }
+        #violet td:first-child {background-color:hsl(300, 76%, 72%); }
+        #fuchsia td:first-child {background-color:hsl(300, 100%, 50%); }
+        #magenta td:first-child {background-color:hsl(300, 100%, 50%); }
+        #orchid td:first-child {background-color:hsl(302, 58%, 65%); }
+        #mediumorchid td:first-child {background-color:hsl(288, 60%, 58%); }
+        #darkorchid td:first-child {background-color:hsl(280, 61%, 49%); }
+        #blueviolet td:first-child {background-color:hsl(271, 76%, 53%); }
+        #darkviolet td:first-child {background-color:hsl(282, 100%, 41%); }
+        #mediumpurple td:first-child {background-color:hsl(259, 60%, 65%); }
+        #slateblue td:first-child {background-color:hsl(248, 53%, 58%); }
+        #purple td:first-child {background-color:hsl(300, 100%, 50%); }
+        #darkmagenta td:first-child {background-color:hsl(300, 100%, 27%); }
+        #darkslateblue td:first-child {background-color:hsl(248, 39%, 31%); }
+        #indigo td:first-child {background-color:hsl(275, 100%, 25%); }
+        #honeydew td:first-child {background-color:hsl(120, 100%, 97%); }
+        #mintcream td:first-child {background-color:hsl(150, 100%, 98%); }
+        #azure td:first-child {background-color:hsl(180, 100%, 97%); }
+        #aliceblue td:first-child {background-color:hsl(208, 100%, 97%); }
+        #GhostWhite td:first-child {background-color:hsl(240, 100%, 97%); }
+        #whitesmoke td:first-child {background-color:hsl(0, 0%, 96%); }
+        #lavenderblush td:first-child {background-color:hsl(340, 100%, 97%); }
+        #mistyrose td:first-child {background-color:hsl(6, 100%, 94%); }
+        #antiquewhite td:first-child {background-color:hsl(34, 78%, 91%); }
+        #seashell td:first-child {background-color:hsl(25, 100%, 97%); }
+        #snow td:first-child {background-color:hsl(0, 0%, 99%); }
+        #white td:first-child {background-color:hsl(0, 0%, 100%); }
+        #beige td:first-child {background-color:hsl(34, 56%, 91%); }
+        #linen td:first-child {background-color:hsl(30, 67%, 94%); }
+        #oldlace td:first-child {background-color:hsl(39, 85%, 95%); }
+        #floralwhite td:first-child {background-color:hsl(40, 100%, 97%); }
+        #ivory td:first-child {background-color:hsl(60, 100%, 97%); }
+        #gainsboro td:first-child {background-color:hsl(0, 0%, 87%); }
+        #lightgrey td:first-child {background-color:hsl(0, 0%, 83%); }
+        #silver td:first-child {background-color:hsl(0, 0%, 75%); }
+        #darkgray td:first-child {background-color:hsl(0, 0%, 66%); }
+        #gray td:first-child {background-color:hsl(0, 0%, 50%); }
+        #dimgray td:first-child {background-color:hsl(0, 0%, 41%); }
+        #darkslategray td:first-child {background-color:hsl(180, 25%, 25%); }
+        #lightslategray td:first-child {background-color:hsl(210, 14%, 53%); }
+        #cornsilk td:first-child {background-color:hsl(48, 100%, 94%); }
+        #blanchedalmond td:first-child {background-color:hsl(36, 77%, 90%); }
+        #bisque td:first-child {background-color:hsl(33, 100%, 88%); }
+        #navajowhite td:first-child {background-color:hsl(34, 100%, 83%); }
+        #wheat td:first-child {background-color:hsl(39, 77%, 83%); }
+        #sandybrown td:first-child {background-color:hsl(28, 87%, 67%); }
+        #goldenrod td:first-child {background-color:hsl(42, 74%, 50%); }
+        #darkgoldenrod td:first-child {background-color:hsl(43, 89%, 38%); }
+        #peru td:first-child {background-color:hsl(30, 63%, 53%); }
+        #chocolate td:first-child {background-color:hsl(25, 75%, 47%); }
+        #maroon td:first-child {background-color:hsl(0, 100%, 25%); }
+        #saddlebrown td:first-child {background-color:hsl(25, 69%, 31%); }
+        #brown td:first-child {background-color:hsl(0, 59%, 41%); }
+        #sienna td:first-child {background-color:hsl(19, 56%, 40%); }
+        #darkred td:first-child {background-color:hsl(0, 100%, 27%); }
+        #burlywood td:first-child {background-color:hsl(34, 57%, 70%); }
+        #tan td:first-child {background-color:hsl(34, 44%, 69%); }
+        #rosybrown td:first-child {background-color:hsl(0, 24%, 65%); }
+        #black td:first-child {background-color:hsl(0, 0%, 0%); }
+        #chrome td:first-child {background-color:hsl(55, 98%, 50%); }
+
+    </style>
+</head>
+<body>
+   <h2>웹 안전색상표</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>컬러</th><th>색상명</th><th>RGB</th><th>HSL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="indianred">
+                <td></td><td>indianred</td><td>#cd5c5c</td><td>HSL(205, 92, 92)</td>
+            </tr>
+            <tr id="darksalmon">
+                <td></td><td>darksalmon</td><td>#e9967a</td><td>HSL(233, 150, 122)</td>
+            </tr>
+            <tr id="lightcoral">
+                <td></td><td>lightcoral</td><td>#f08080</td><td>HSL(240, 128, 128)</td>
+            </tr>
+            <tr id="salmon">
+                <td></td><td>salmon</td><td>#fa8072</td><td>HSL(250, 128, 114)</td>
+            </tr>
+            <tr id="orangered">
+                <td></td><td>orangered</td><td>#ff4500</td><td>HSL(255, 69, 0)</td>
+            </tr>
+            <tr id="red">
+                <td></td><td>red(빨간색)</td><td>#ff0000</td><td>HSL(255, 0, 0)</td>
+            </tr>
+            <tr id="crimson">
+                <td></td><td>crimson(다홍)</td><td>#dc143c</td><td>HSL(220, 20, 60)</td>
+            </tr>
+            <tr id="firebrick">
+                <td></td><td>firebrick</td><td>#b22222</td><td>HSL(178, 34, 34)</td>
+            </tr>
+            <tr id="darkred">
+                <td></td><td>darkred(흑적색)</td><td>#8b0000</td><td>HSL(139, 0, 0)</td>
+            </tr>
+            <tr id="mediumvioletred">
+                <td></td><td>mediumvioletred</td><td>#c71585</td><td>HSL(199, 21, 133)</td>
+            </tr>
+            <tr id="pink">
+                <td></td><td>pink(분홍)</td><td>#ffc0cb</td><td>HSL(255, 192, 203)</td>
+            </tr>
+            <tr id="lightpink">
+                <td></td><td>lightpink(연분홍)</td><td>#ffb6c1</td><td>HSL(255, 182, 193)</td>
+            </tr>
+            <tr id="hotpink">
+                <td></td><td>hotpink</td><td>#ff69b4</td><td>HSL(255, 105, 180)</td>
+            </tr>
+            <tr id="deeppink">
+                <td></td><td>deeppink(진분홍)</td><td>#ff1493</td><td>HSL(255, 20, 147)</td>
+            </tr>
+            <tr id="palevioletred">
+                <td></td><td>palevioletred</td><td>#db7093</td><td>HSL(219, 112, 147)</td>
+            </tr>
+            <tr id="darkkhaki">
+                <td></td><td>darkkhaki</td><td>#bdb76b</td><td>HSL(189, 183, 107)</td>
+            </tr>
+            <tr id="khaki">
+                <td></td><td>khaki</td><td>#f0e68c</td><td>HSL(240, 230, 140)</td>
+            </tr>
+            <tr id="palegoldenrod">
+                <td></td><td>palegoldenrod</td><td>#eee8aa</td><td>HSL(238, 232, 170)</td>
+            </tr>
+            <tr id="lightgoldenrodyellow">
+                <td></td><td>lightgoldenrodyellow</td><td>#fafad2</td><td>HSL(250, 250, 210)</td>
+            </tr>
+            <tr id="lightyellow">
+                <td></td><td>lightyellow(밝은노랑)</td><td>#ffffe0</td><td>HSL(255, 255, 224)</td>
+            </tr>
+            <tr id="lemonchiffon">
+                <td></td><td>lemonchiffon</td><td>#fffacd</td><td>HSL(255, 250, 205)</td>
+            </tr>
+            <tr id="yellow">
+                <td></td><td>yellow(노랑)</td><td>#ffff00</td><td>HSL(255, 255, 0)</td>
+            </tr>
+            <tr id="gold">
+                <td></td><td>gold(금색)</td><td>#ffd700</td><td>HSL(255, 215, 0)</td>
+            </tr>
+            <tr id="papayawhip">
+                <td></td><td>papayawhip</td><td>#ffefd5</td><td>HSL(255, 239, 213)</td>
+            </tr>
+            <tr id="moccasin">
+                <td></td><td>moccasin</td><td>#ffe4b5</td><td>HSL(255, 228, 181)</td>
+            </tr>
+            <tr id="peachpuff">
+                <td></td><td>peachpuff</td><td>#ffdab9</td><td>HSL(255, 218, 185)</td>
+            </tr>
+            <tr id="cyan">
+                <td></td><td>cyan(옥색)</td><td>#00ffff</td><td>HSL(0, 255, 255)</td>
+            </tr>
+            <tr id="aqua">
+                <td></td><td>aqua</td><td>#00ffff</td><td>HSL(0, 255, 255)</td>
+            </tr>
+            <tr id="aquamarine">
+                <td></td><td>aquamarine</td><td>#7fffd4</td><td>HSL(127, 255, 212)</td>
+            </tr>
+            <tr id="turquoise">
+                <td></td><td>turquoise(터키옥색)</td><td>#40e0d0</td><td>HSL(64, 224, 208)</td>
+            </tr>
+            <tr id="mediumturquoise">
+                <td></td><td>mediumturquoise</td><td>#48d1cc</td><td>HSL(72, 209, 204)</td>
+            </tr>
+            <tr id="darkturquoise">
+                <td></td><td>darkturquoise</td><td>#00ced1</td><td>HSL(0, 206, 209)</td>
+            </tr>
+            <tr id="cadetblue">
+                <td></td><td>cadetblue</td><td>#5f9ea0</td><td>HSL(95, 158, 160)</td>
+            </tr>
+            <tr id="slategray">
+                <td></td><td>slategray</td><td>#708090</td><td>HSL(112, 128, 144)</td>
+            </tr>
+            <tr id="lightcyan">
+                <td></td><td>lightcyan</td><td>#e0ffff</td><td>HSL(224, 255, 255)</td>
+            </tr>
+            <tr id="paleturquoise">
+                <td></td><td>paleturquoise</td><td>#afeeee</td><td>HSL(175, 238, 238)</td>
+            </tr>
+            <tr id="powderblue">
+                <td></td><td>powderblue</td><td>#b0e0e6</td><td>HSL(176, 224, 230)</td>
+            </tr>
+            <tr id="lightsteelblue">
+                <td></td><td>lightsteelblue</td><td>#b0c4de</td><td>HSL(176, 196, 222)</td>
+            </tr>
+            <tr id="steelblue">
+                <td></td><td>steelblue</td><td>#4682b4</td><td>HSL(70, 130, 180)</td>
+            </tr>
+            <tr id="lightblue">
+                <td></td><td>lightblue(밝은파랑)</td><td>#add8e6</td><td>HSL(173, 216, 230)</td>
+            </tr>
+            <tr id="skyblue">
+                <td></td><td>skyblue(하늘색)</td><td>#87ceeb</td><td>HSL(135, 206, 235)</td>
+            </tr>
+            <tr id="lightskyblue">
+                <td></td><td>lightskyblue</td><td>#87cefa</td><td>HSL(135, 206, 250)</td>
+            </tr>
+            <tr id="deepskyblue">
+                <td></td><td>deepskyblue</td><td>#00bfff</td><td>HSL(0, 191, 255)</td>
+            </tr>
+            <tr id="cornflowerblue">
+                <td></td><td>cornflowerblue</td><td>#6495ed</td><td>HSL(100, 149, 237)</td>
+            </tr>
+            <tr id="royalblue">
+                <td></td><td>royalblue</td><td>#4169e1</td><td>HSL(65, 105, 225)</td>
+            </tr>
+            <tr id="mediumslateblue">
+                <td></td><td>mediumslateblue</td><td>#7b68ee</td><td>HSL(123, 104, 238)</td>
+            </tr>
+            <tr id="dodgerblue">
+                <td></td><td>dodgerblue</td><td>#1e90ff</td><td>HSL(30, 144, 255)</td>
+            </tr>
+            <tr id="blue">
+                <td></td><td>blue(파랑)</td><td>#0000ff</td><td>HSL(0, 0, 255)</td>
+            </tr>
+            <tr id="mediumblue">
+                <td></td><td>mediumblue</td><td>#0000cd</td><td>HSL(0, 0, 205)</td>
+            </tr>
+            <tr id="darkblue">
+                <td></td><td>darkblue</td><td>#00008b</td><td>HSL(0, 0, 139)</td>
+            </tr>
+            <tr id="navy">
+                <td></td><td>navy(남색)</td><td>#000080</td><td>HSL(0, 0, 128)</td>
+            </tr>
+            <tr id="midnightblue">
+                <td></td><td>midnightblue</td><td>#191970</td><td>HSL(25, 25, 112)</td>
+            </tr>
+            <tr id="lightsalmon">
+                <td></td><td>lightsalmon</td><td>#ffa07a</td><td>HSL(255, 160, 122)</td>
+            </tr>
+            <tr id="orange">
+                <td></td><td>orange(오렌지색)</td><td>#ffa500</td><td>HSL(255, 165, 0)</td>
+            </tr>
+            <tr id="darkorange">
+                <td></td><td>darkorange</td><td>#ff8c00</td><td>HSL(255, 140, 0)</td>
+            </tr>
+            <tr id="coral">
+                <td></td><td>coral</td><td>#ff7f50</td><td>HSL(255, 127, 80)</td>
+            </tr>
+            <tr id="tomato">
+                <td></td><td>tomato</td><td>#ff6347</td><td>HSL(255, 99, 71)</td>
+            </tr>
+            <tr id="aquamarine">
+                <td></td><td>aquamarine</td><td>#7fffd4</td><td>HSL(127, 255, 212)</td>
+            </tr>
+            <tr id="mediumspringgreen">
+                <td></td><td>mediumspringgreen</td><td>#00fa9a</td><td>HSL(0, 250, 154)</td>
+            </tr>
+            <tr id="springgreen">
+                <td></td><td>springgreen(춘록색)</td><td>#00ff7f</td><td>HSL(0, 255, 127)</td>
+            </tr>
+            <tr id="palegreen">
+                <td></td><td>palegreen</td><td>#98fb98</td><td>HSL(152, 251, 152)</td>
+            </tr>
+            <tr id="greenyellow">
+                <td></td><td>greenyellow(초록노랑)</td><td>#adff2f</td><td>HSL(173, 255, 47)</td>
+            </tr>
+            <tr id="chartreuse">
+                <td></td><td>chartreuse</td><td>#7fff00</td><td>HSL(127, 255, 0)</td>
+            </tr>
+            <tr id="lawngreen">
+                <td></td><td>lawngreen</td><td>#7cfc00</td><td>HSL(124, 252, 0)</td>
+            </tr>
+            <tr id="lime">
+                <td></td><td>lime(라임색)</td><td>#00ff00</td><td>HSL(0, 255, 0)</td>
+            </tr>
+            <tr id="lightgreen">
+                <td></td><td>lightgreen</td><td>#90ee90</td><td>HSL(144, 238, 144)</td>
+            </tr>
+            <tr id="yellowgreen">
+                <td></td><td>yellowgreen(노랑초록)</td><td>#9acd32</td><td>HSL(154, 205, 50)</td>
+            </tr>
+            <tr id="limegreen">
+                <td></td><td>limegreen(라임초록)</td><td>#32cd32</td><td>HSL(50, 205, 50)</td>
+            </tr>
+            <tr id="mediumseagreen">
+                <td></td><td>mediumseagreen</td><td>#3cb371</td><td>HSL(60, 179, 113)</td>
+            </tr>
+            <tr id="darkseagreen">
+                <td></td><td>darkseagreen</td><td>#8fbc8f</td><td>HSL(143, 188, 143)</td>
+            </tr>
+            <tr id="forestgreen">
+                <td></td><td>forestgreen</td><td>#228b22</td><td>HSL(34, 139, 34)</td>
+            </tr>
+            <tr id="seagreen">
+                <td></td><td>seagreen</td><td>#2e8b57</td><td>HSL(46, 139, 87)</td>
+            </tr>
+            <tr id="green">
+                <td></td><td>green(초록)</td><td>#008000</td><td>HSL(0, 128, 0)</td>
+            </tr>
+            <tr id="olivedrab">
+                <td></td><td>olivedrab</td><td>#6b8e23</td><td>HSL(107, 142, 35)</td>
+            </tr>
+            <tr id="olive">
+                <td></td><td>olive(올리브색)</td><td>#808000</td><td>HSL(128, 128, 0)</td>
+            </tr>
+            <tr id="darkolivegreen">
+                <td></td><td>darkolivegreen</td><td>#556b2f</td><td>HSL(85, 107, 47)</td>
+            </tr>
+            <tr id="darkgreen">
+                <td></td><td>darkgreen</td><td>#006400</td><td>HSL(0, 100, 0)</td>
+            </tr>
+            <tr id="mediumaquamarine">
+                <td></td><td>mediumaquamarine</td><td>#66cdaa</td><td>HSL(102, 205, 170)</td>
+            </tr>
+            <tr id="turquoise">
+                <td></td><td>turquoise</td><td>#40e0d0</td><td>HSL(64, 224, 208)</td>
+            </tr>
+            <tr id="lightseagreen">
+                <td></td><td>lightseagreen</td><td>#20b2aa</td><td>HSL(32, 178, 170)</td>
+            </tr>
+            <tr id="darkcyan">
+                <td></td><td>darkcyan</td><td>#008b8b</td><td>HSL(0, 139, 139)</td>
+            </tr>
+            <tr id="teal">
+                <td></td><td>teal</td><td>#008080</td><td>HSL(0, 128, 128)</td>
+            </tr>
+            <tr id="lavender">
+                <td></td><td>lavender(라벤더색)</td><td>#e6e6fa</td><td>HSL(230, 230, 250)</td>
+            </tr>
+            <tr id="thistle">
+                <td></td><td>thistle</td><td>#d8bfd8</td><td>HSL(216, 191, 216)</td>
+            </tr>
+            <tr id="plum">
+                <td></td><td>plum(자두색)</td><td>#dda0dd</td><td>HSL(221, 160, 221)</td>
+            </tr>
+            <tr id="violet">
+                <td></td><td>violet(자주색)</td><td>#ee82ee</td><td>HSL(238, 130, 238)</td>
+            </tr>
+            <tr id="fuchsia">
+                <td></td><td>fuchsia</td><td>#ff77ff</td><td>HSL(255, 119, 255)</td>
+            </tr>
+            <tr id="magenta">
+                <td></td><td>magenta(마젠타색)</td><td>#ff00ff</td><td>HSL(255, 0, 255)</td>
+            </tr>
+            <tr id="orchid">
+                <td></td><td>orchid(난초색)</td><td>#da70d6</td><td>HSL(218, 112, 214)</td>
+            </tr>
+            <tr id="mediumorchid">
+                <td></td><td>mediumorchid</td><td>#ba55d3</td><td>HSL(186, 85, 211)</td>
+            </tr>
+            <tr id="darkorchid">
+                <td></td><td>darkorchid</td><td>#9932cc</td><td>HSL(153, 50, 204)</td>
+            </tr>
+            <tr id="blueviolet">
+                <td></td><td>blueviolet(청자색)</td><td>#8a2be2</td><td>HSL(138, 43, 226)</td>
+            </tr>
+            <tr id="darkviolet">
+                <td></td><td>darkviolet</td><td>#9400d3</td><td>HSL(148, 0, 211)</td>
+            </tr>
+            <tr id="mediumpurple">
+                <td></td><td>mediumpurple</td><td>#9370db</td><td>HSL(147, 112, 219)</td>
+            </tr>
+            <tr id="slateblue">
+                <td></td><td>slateblue</td><td>#6a5acd</td><td>HSL(106, 90, 205)</td>
+            </tr>
+            <tr id="purple">
+                <td></td><td>purple(보라색)</td><td>#800080</td><td>HSL(128, 0, 128)</td>
+            </tr>
+            <tr id="darkmagenta">
+                <td></td><td>darkmagenta</td><td>#8b008b</td><td>HSL(139, 0, 139)</td>
+            </tr>
+            <tr id="darkslateblue">
+                <td></td><td>darkslateblue</td><td>#483d8b</td><td>HSL(72, 61, 139)</td>
+            </tr>
+            <tr id="indigo">
+                <td></td><td>indigo</td><td>#4b0082</td><td>HSL(75, 0, 130)</td>
+            </tr>
+            <tr id="honeydew">
+                <td></td><td>honeydew</td><td>#f0fff0</td><td>HSL(240, 255, 240)</td>
+            </tr>
+            <tr id="mintcream">
+                <td></td><td>mintcream</td><td>#f5fffa</td><td>HSL(245, 255, 250)</td>
+            </tr>
+            <tr id="azure">
+                <td></td><td>azure</td><td>#f0ffff</td><td>HSL(240, 255, 255)</td>
+            </tr>
+            <tr id="aliceblue">
+                <td></td><td>aliceblue</td><td>#f0f8ff</td><td>HSL(240, 248, 255)</td>
+            </tr>
+            <tr id="GhostWhite">
+                <td></td><td>GhostWhite</td><td>#f8f8ff</td><td>HSL(248, 248, 255)</td>
+            </tr>
+            <tr id="whitesmoke">
+                <td></td><td>whitesmoke</td><td>#f5f5f5</td><td>HSL(245, 245, 245)</td>
+            </tr>
+            <tr id="lavenderblush">
+                <td></td><td>lavenderblush</td><td>#fff0f5</td><td>HSL(255, 240, 245)</td>
+            </tr>
+            <tr id="mistyrose">
+                <td></td><td>mistyrose</td><td>#ffe4e1</td><td>HSL(255, 228, 225)</td>
+            </tr>
+            <tr id="antiquewhite">
+                <td></td><td>antiquewhite</td><td>#faebd7</td><td>HSL(250, 235, 215)</td>
+            </tr>
+            <tr id="seashell">
+                <td></td><td>seashell(조개색)</td><td>#fff5ee</td><td>HSL(255, 245, 238)</td>
+            </tr>
+            <tr id="snow">
+                <td></td><td>snow(눈색)</td><td>#fffafa</td><td>HSL(255, 250, 250)</td>
+            </tr>
+            <tr id="white">
+                <td></td><td>white(하양)</td><td>#ffffff</td><td>HSL(255, 255, 255)</td>
+            </tr>
+            <tr id="beige">
+                <td></td><td>beige(베이지)</td><td>#f5f5dc</td><td>HSL(245, 245, 220)</td>
+            </tr>
+            <tr id="linen">
+                <td></td><td>linen(아마포색)</td><td>#faf0e6</td><td>HSL(250, 240, 230)</td>
+            </tr>
+            <tr id="oldlace">
+                <td></td><td>oldlace</td><td>#fdf5e6</td><td>HSL(253, 245, 230)</td>
+            </tr>
+            <tr id="floralwhite">
+                <td></td><td>floralwhite</td><td>#fffaf0</td><td>HSL(255, 250, 240)</td>
+            </tr>
+            <tr id="ivory">
+                <td></td><td>ivory(상아색)</td><td>#fffff0</td><td>HSL(255, 255, 240)</td>
+            </tr>
+            <tr id="gainsboro">
+                <td></td><td>gainsboro</td><td>#dcdcdc</td><td>HSL(220, 220, 220)</td>
+            </tr>
+            <tr id="lightgrey">
+                <td></td><td>lightgrey(밝은 회색)</td><td>#d3d3d3</td><td>HSL(211, 211, 211)</td>
+            </tr>
+            <tr id="silver">
+                <td></td><td>silver(은색)</td><td>#c0c0c0</td><td>HSL(192, 192, 192)</td>
+            </tr>
+            <tr id="darkgray">
+                <td></td><td>darkgray</td><td>#a9a9a9</td><td>HSL(169, 169, 169)</td>
+            </tr>
+            <tr id="gray">
+                <td></td><td>gray(회색)</td><td>#808080</td><td>HSL(128, 128, 128)</td>
+            </tr>
+            <tr id="dimgray">
+                <td></td><td>dimgray</td><td>#696969</td><td>HSL(105, 105, 105)</td>
+            </tr>
+            <tr id="darkslategray">
+                <td></td><td>darkslategray</td><td>#2f4f4f</td><td>HSL(47, 79, 79)</td>
+            </tr>
+            <tr id="lightslategray">
+                <td></td><td>lightslategray</td><td>#778899</td><td>HSL(119, 136, 153)</td>
+            </tr>
+            <tr id="cornsilk">
+                <td></td><td>cornsilk</td><td>#fff8dc</td><td>HSL(255, 248, 220)</td>
+            </tr>
+            <tr id="blanchedalmond">
+                <td></td><td>blanchedalmond</td><td>#ffebcd</td><td>HSL(255, 235, 205)</td>
+            </tr>
+            <tr id="bisque">
+                <td></td><td>bisque</td><td>#ffe4c4</td><td>HSL(255, 228, 196)</td>
+            </tr>
+            <tr id="navajowhite">
+                <td></td><td>navajowhite</td><td>#ffdead</td><td>HSL(255, 222, 173)</td>
+            </tr>
+            <tr id="wheat">
+                <td></td><td>wheat</td><td>#f5deb3</td><td>HSL(245, 222, 179)</td>
+            </tr>
+            <tr id="sandybrown">
+                <td></td><td>sandybrown</td><td>#f4a460</td><td>HSL(244, 164, 96)</td>
+            </tr>
+            <tr id="goldenrod">
+                <td></td><td>goldenrod</td><td>#daa520</td><td>HSL(218, 165, 32)</td>
+            </tr>
+            <tr id="darkgoldenrod">
+                <td></td><td>darkgoldenrod</td><td>#b8860b</td><td>HSL(184, 134, 11)</td>
+            </tr>
+            <tr id="peru">
+                <td></td><td>peru</td><td>#cd853f</td><td>HSL(205, 133, 63)</td>
+            </tr>
+            <tr id="chocolate">
+                <td></td><td>chocolate</td><td>#d2691e</td><td>HSL(210, 105, 30)</td>
+            </tr>
+            <tr id="maroon">
+                <td></td><td>maroon(적갈색)</td><td>#800000</td><td>HSL(128, 0, 0)</td>
+            </tr>
+            <tr id="saddlebrown">
+                <td></td><td>saddlebrown</td><td>#8b4513</td><td>HSL(139, 69, 19)</td>
+            </tr>
+            <tr id="brown">
+                <td></td><td>brown(갈색)</td><td>#a52a2a</td><td>HSL(165, 42, 42)</td>
+            </tr>
+            <tr id="sienna">
+                <td></td><td>sienna</td><td>#a0522d</td><td>HSL(160, 82, 45)</td>
+            </tr>
+            <tr id="darkred">
+                <td></td><td>darkred</td><td>#8b0000</td><td>HSL(139, 0, 0)</td>
+            </tr>
+            <tr id="burlywood">
+                <td></td><td>burlywood</td><td>#deb887</td><td>HSL(222, 184, 135)</td>
+            </tr>
+            <tr id="tan">
+                <td></td><td>tan(황갈색)</td><td>#d2b48c</td><td>HSL(210, 180, 140)</td>
+            </tr>
+            <tr id="rosybrown">
+                <td></td><td>rosybrown</td><td>#bc8f8f</td><td>HSL(188, 143, 143)</td>
+            </tr>
+            <tr id="black">
+                <td></td><td>black(검정색)</td><td>#000000</td><td>HSL(0, 0, 0)</td>
+            </tr>
+            <tr id="chrome">
+                <td></td><td>chrome(황연색)</td><td>#f7e600</td><td>HSL(247, 230, 0)</td>
+            </tr>
+            </tbody></table>
+        </tbody>
+    </table>
+</body>
+</html>
