@@ -196,8 +196,117 @@
         </tbody>
     </table> 
  
+    <h3 style="color:deepskyblue">스타일 선택자 사용 주의 사항</h3>
+    <ul>
+        <li><p>선택자의 우선 순위는 아이디 > 클래스 > 태그 순이다.</p></li>
+        <li><p>단계적으로 선택자를 기입하되, 단순한 선택자 부터 기입하고, 복잡한 선택자를 아래에 배치한다.</p></li>
+        <li><p>범위가 크거나 부모의 선택부터 하고, 그 다음에 범위가 작거나 세밀한 선택을 하도록 해야 한다.</p></li>
+        <li><p>아이디는 한 문서 내에서 중복되어서는 안된다.</p></li>
+        <li><p>같은 서식이 부여되는 경우는 가급적 클래스를 활용하여 같은 서식을 부여하도록 한다.</p></li>
+    </ul>
+
+    <br><br><hr><br>
+
+    <h2>CSS 속성 - Color</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>속성명</th><th>도메인</th><th>설명</th><th>예시</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>background-color</td><td>transparent | 컬러명 | RGB HEX(3/6) | RGB(0-255,0-255,0-255) | HSL(Hue,Sturation%,Lightness%)</td><td>배경색을 지정하는 속성</td><td>background-color:#000<br>background-color:#000000<br>background-color:black<br>background-color:rgb(0,0,0)<br>background-color:rgba(0,0,0,1)<br>background-color:hsl(240,0%,0%)<br>background-color:hsla(240,0%,0%,1)</td>                
+            </tr>
+            <tr>
+                <td>background-image</td><td>none | url(이미지경로)</td><td>배경 이미지를 지정하는 속성</td><td>background-image:url(./images/ive.png), url(./images/jungle.jpg)</td>                
+            </tr>
+            <tr>
+                <td>background-repeat</td><td>repeat | repeat-x | repeat-y | no-repeat</td><td>배경이미지의 반복 속성</td><td>background-image:url(./images/ive.png), url(./images/jungle.jpg)</td>                
+            </tr>
+            <tr>
+                <td>background-position</td><td>가로위치 세로위치로 지정하되, 0 0 | top | bottom | left | right | middle | 숫자(+/-)px/%</td><td>배경이미지 위치 지정 속성</td><td>background-position:left bottom<br>background-position:-200px -100px</td>                
+            </tr>
+            <tr>
+                <td>background-attachment</td><td>scroll | fixed | local</td><td>배경이미지 고정 유무 지정 속성</td><td>background-attachment:fixed</td>                
+            </tr>
+            <tr>
+                <td>background-origin</td><td>padding-box | border-box | content-box</td><td>배경이미지의 원점 기준 지정 속성</td><td>background-origin:content-box</td>                
+            </tr>
+            <tr>
+                <td>background-size</td><td>auto | 가로크기 세로크기 | cover | contain</td><td>배경이미지의 크기 지정 속성</td><td>background-size:100px 200px, 200px 400px</td>                
+            </tr>
+            <tr>
+                <td>background-clip</td><td>padding-box | border-box | content-box</td><td>배경이미지의 영역을 어디까지 표시할지 지정 속성</td><td>background-clip:border-box</td>                
+            </tr>
+            <tr>
+                <td>background</td><td>bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment</td><td>배경에 모든 세부속성을 한 꺼번에 지저하는 통합 속성</td><td>background-clip:border-box</td>                
+            </tr>
+            <tr>
+                <td>filter</td><td>blur(px) &| brightness(%) &| contrast(%) &| grayscale(%) &| invert(%) &| opcacity(%) &| saturate(%) &| sepia(%) &| drop-shadow(x y blur px) &| hue-rotate(deg)</td><td>배경이나 이미지에 필터 효과를 적용하는 속성</td><td>filter:blur(3px) hue-rotate(45deg) opacity(85%)</td>                
+            </tr>
+            
+        </tbody>
+    </table>
+    <h2>CSS 속성 - 글자 / 문단 속성 ※@:규칙</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>속성(규칙)명</th><th>도메인</th><th>설명</th><th>예시</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@font-face</td><td>@font-face { font-family:"폰트별칭"; src:url(폰트파일 이름을 포함한 웹 폰트의 경로); }</td><td>웹페이지에서 적용할 폰트를 규정하는 규칙</td><td>@font-face { font-family:"ntg"; url(./font/notosans.woff); }</td>
+            </tr>
+            <tr>
+                <td>@font-family</td><td>font-family:"폰트별칭"[, 대체폰트1, 기본웹폰트];</td><td>폰트 규칙(@font-face) 에서 규정한 폰트를 적용하는 속성. 기본 웹폰트 : serif(명조), sans-serif(고딕), cursive(궁서), fantasy(장식), monospace(장평같음:영문만.)</td><td> .con{ font-family:"ntg", sans-serif, sursive; }</td>
+            </tr>
+            <tr>
+                <td>color</td><td>color: 색상명 | RGB HEX(3자리 또는 6자리) | rgb | rgba | hsl | hsla </td><td>글자 색을 지정하는 속성으로 16진수 HEX코드와 여러 색 함수를 활용할 수 있음. </td><td> .con{ color:deepskyblue; }<br>.con strong { color : #333; }</td>
+            </tr>            
+            <tr>
+                <td>font-size</td><td>font-size: initial(기본값) | xx-small | x-small | small | medium | large | x-large | xx-large | px, cm, em, %, rem 단위</td><td>글자 크기를 나타내는 키워드 또는 크기단위로 지정할 수 있음. </td><td> .con{ font-size:14px }<br>.con strong { font-size:1.5em; }</td>
+            </tr>  
+            <tr>
+                <td>font-weight</td><td>font-weight: normal(기본값) | bold | bolder | lighter | 100 ~ 900(100단위, 폰트마다 다름) </td><td> 글자 두께를 지정하는 속성으로 폰트별로 크기를 100부터 900까지 100단위로 지정할 수 있으며 해당 키워드도 가능하다. </td><td> .con{ font-size:14px }<br>.con strong { font-size:1.5em; }</td>
+            </tr>  
+            <tr>
+                <td>font-style</td><td>font-style: normal | italic | oblique </td><td> 글자 기울임꼴을 지정하는 속성 </td><td> .con{ font-style:italic; }<br>.con strong { font-style:normal; }</td>
+            </tr>  
+            <tr>
+                <td>font-variant</td><td>font-variant: normal | small-caps </td><td> 대소문자가 있는 알파벳 계영에서 대소문자의 크기가 서로 달라 대문자를 소문자크기로 변경하기 위한 속성 </td><td> .con{ font-variant:small-caps; }<br>.con strong { font-variant:normal; }</td>
+            </tr>  
+            <tr>
+                <td>font-stretch</td><td>font-stretch: normal | ultra-condensed | extra-condensed | condensed | semi-condensed | ultra-condensed </td><td> 글자의 장평(높이와 폭)을 지정하기 위한 속성 </td><td> .con{ font-stretch:condensed; }<br>.con strong { font-strech:condensed; }</td>
+            </tr> 
+            <tr>
+                <td>line-height</td><td>line-height: normal | 1.6(기본), 숫자단위 | px, % 단위 </td><td> 글자의 한 행 높이를 지정하기 위한 속성으로 블록요소에 지정 </td><td> .con{ line-height:2; }<br>.con strong { line-height:30px; }</td>
+            </tr> 
+            <tr>
+                <td>word-spacing</td><td>word-spacing : normal | px, pt, cm, em 단위 </td><td> 어간(단어와 단어 사이의 간격)을 지정하기 위한 속성 </td><td> .con{ word-spacing:10px; }<br>.con strong { line-height:normal; }</td>
+            </tr> 
+            <tr>
+                <td>letter-spacing</td><td>letter-spacing : normal | px, pt, cm, em 단위 </td><td> 자간(글자와 글자 사이의 간격)을 지정하기 위한 속성 </td><td> .con{ letter-spacing:10px; }<br>.con strong { letter-height:-2px; }</td>
+            </tr> 
+            <tr>
+                <td>text-align</td><td>text-align : left(기본) | right | center(수평정렬) | justify(배분정렬) </td><td> 글자를 정렬하기 위한 속성으로 블록요소에 지정 </td><td> .con{ text-align:center; }<br>.con strong { text-align:left; }</td>
+            </tr> 
+            <tr>
+                <td>text-decoration</td><td>text-decoration : none(기본) | underline | overline | line-through(취소선)</td><td> 글자나 특정 단어에 줄을 적용할 때 지정하는 속성 </td><td> .con{ text-decoration:none; }<br>.con { text-decoration:underline; }</td>
+            </tr> 
+            <tr>
+                <td>text-indent</td><td>text-indent : 0(기본) | %, px, pt, cm, em 단위</td><td> 들여쓰기(+)/내어쓰기(-) 지정하는 속성 </td><td> .con1 { text-indent:20px; }<br>.con2 { text-indent:-10px; }</td>
+            </tr> 
+            <tr>
+                <td>text-transform</td><td>text-transform : none(기본) | uppercase(영문 대문자) | lowercase(영문 소문자) | capitalize(영문 첫번째 글자만 대문자, 나머진 소문자) </td><td> 영문계열 대/소문자로 변환해주는 속성 </td><td> .con1 { text-transform:uppercase; }<br>.con2 { text-transform:capitalize; }</td>
+            </tr> 
+            <tr>
+                <td>text-orientation</td><td>text-orientation : mixed(기본->글자가 90도로 꺾인다.(세로)) | upright | sideways | sideways-right | use-glyph-orientation </td><td> 문단의 글자 읽는 진행방향을 설정 </td><td> .con1 { text-orientation:upright; }<br>.con2 { text-orientation:sideways; }</td>
+            </tr> 
+        </tbody>
+    </table>
     
-    <br><br><br>
 </div>
 </body>
 </html>
